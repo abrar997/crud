@@ -1,0 +1,63 @@
+body {
+  background-color: #f1f4fc;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.crud {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin: 100px 0px;
+}
+.crud h1 {
+  font-size: 40px;
+  color: rgb(0, 69, 122);
+  height: 20px;
+}
+
+.crud form {
+  padding: 0px 40px 42px 40px;
+  width: 600px;
+  display: grid;
+  gap: 12px;
+  border-radius: 20px;
+  background: linear-gradient(185deg, #b9bdc8, #ebeef6);
+  box-shadow: 20px 20px 60px #afb3bd, -20px -20px 60px #edf2ff;
+}
+
+.crud form .form-div {
+  display: grid;
+  align-items: start;
+  justify-items: start;
+  gap: 4px;
+}
+.crud form .form-div input[type="text"] {
+  padding: 12px 4px;
+  width: 96%;
+  background-color: #d8d8d8;
+  border: 0.5px solid #b5acac;
+  border-radius: 3px;
+  color: black;
+  background: #ced2de;
+  box-shadow: inset 6px 6px 12px #bec1cc, inset -6px -6px 12px #dee3f0;
+}
+
+.crud form .form-div input[type="text"]::placeholder {
+  color: rgb(91, 91, 91);
+}
+
+.crud form button {
+  padding: 10px;
+  border-radius: 4px;
+  color: rgb(0, 69, 122);
+  border: none;
+  font-weight: bold;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 11px;
+  background: #ced2de;
+  box-shadow: 6px 6px 12px #bec1cc, -6px -6px 12px #dee3f0;
+}
+.crud form button:hover {
+  opacity: 80%;
+}
