@@ -61,3 +61,30 @@ body {
 .crud form button:hover {
   opacity: 80%;
 }
+
+@media screen and (min-width: 330px) and (max-width: 667px) {
+  .crud {
+    display: grid;
+    margin: 10px 0px;
+  }
+  .crud form {
+    padding: 0px 12px 20px 12px;
+    display: grid;
+    width: 100%;
+    gap: 12px;
+    border-radius: 20px;
+    background: linear-gradient(185deg, #b9bdc8, #ebeef6);
+  }
+  .crud form .form-div input[type="text"] {
+    background-color: #d8d8d8;
+    border: 0.5px solid #b5acac;
+    width: 100%;
+    border-radius: 3px;
+    color: black;
+    background: #ced2de;
+    box-shadow: inset 6px 6px 12px #bec1cc, inset -6px -6px 12px #dee3f0;
+  }
+  .crud h1 {
+    font-size: 32px;
+  }
+}
