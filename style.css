@@ -2,36 +2,45 @@ body {
   background-color: #f1f4fc;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.crud {
+h1 {
+  font-size: 42px;
+  color: rgb(0, 69, 122);
+}
+
+.main .container {
   display: grid;
   justify-content: center;
   align-content: center;
   text-align: center;
-  margin: 100px 0px;
+  margin: 80px 0px;
+  gap: 0px;
 }
-.crud h1 {
-  font-size: 40px;
-  color: rgb(0, 69, 122);
-  height: 20px;
+.main .container .form {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  gap: 0px;
+  background: linear-gradient(185deg, #b9bdc8, #ebeef6);
+  box-shadow: 20px 20px 60px #afb3bd, -20px -20px 60px #edf2ff;
+  border-radius: 20px;
 }
 
-.crud form {
+.main .container .form form {
   padding: 0px 40px 42px 40px;
   width: 600px;
   display: grid;
   gap: 12px;
-  border-radius: 20px;
-  background: linear-gradient(185deg, #b9bdc8, #ebeef6);
-  box-shadow: 20px 20px 60px #afb3bd, -20px -20px 60px #edf2ff;
 }
 
-.crud form .form-div {
+.main .container .form form .form-div {
   display: grid;
   align-items: start;
   justify-items: start;
   gap: 4px;
 }
-.crud form .form-div input[type="text"] {
+.main .container .form form .form-div input,
+textarea {
   padding: 12px 4px;
   width: 96%;
   background-color: #d8d8d8;
@@ -42,11 +51,11 @@ body {
   box-shadow: inset 6px 6px 12px #bec1cc, inset -6px -6px 12px #dee3f0;
 }
 
-.crud form .form-div input[type="text"]::placeholder {
+.main .container .form form .form-div::placeholder {
   color: rgb(91, 91, 91);
 }
 
-.crud form button {
+.main .container .form form button {
   padding: 10px;
   border-radius: 4px;
   color: rgb(0, 69, 122);
@@ -54,37 +63,156 @@ body {
   font-weight: bold;
   width: 100px;
   cursor: pointer;
-  border-radius: 11px;
   background: #ced2de;
   box-shadow: 6px 6px 12px #bec1cc, -6px -6px 12px #dee3f0;
 }
-.crud form button:hover {
+.main .container .form form button:hover {
   opacity: 80%;
 }
+.task {
+  border-radius: 3px;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-radius: 10px;
+  margin-top: 20px;
+  background: linear-gradient(185deg, #d2deff62, #ebeef6);
+  box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+  box-sizing: border-box;
+}
+.task h1 {
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 20px;
+  margin-top: -4px;
+  width: 550px;
+  box-sizing: border-box;
+}
 
-@media screen and (min-width: 330px) and (max-width: 667px) {
-  .crud {
-    display: grid;
-    margin: 10px 0px;
+.task p {
+  margin-top: -2px;
+  font-size: 12px;
+  width: 550px;
+  box-sizing: border-box;
+}
+
+.buttons-task button {
+  cursor: pointer;
+}
+
+.buttons-task button:hover {
+  opacity: 85%;
+}
+
+.buttons-task .edit {
+  background-color: rgb(33, 100, 171);
+  border-radius: 4px;
+  padding: 4px 6px;
+  border: none;
+  color: white;
+  box-shadow: 6px 6px 12px #bec1cc, -6px -6px 12px #dee3f0;
+}
+.buttons-task .delete {
+  background-color: rgb(238, 101, 101);
+  border-radius: 4px;
+  padding: 4px 6px;
+  border: none;
+  color: white;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+}
+.danger {
+  background-color: red;
+  color: white;
+}
+
+@media screen and (min-width: 350px) and (max-width: 662px) {
+  .main .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: 30px 8px;
+    gap: 0px;
   }
-  .crud form {
-    padding: 0px 12px 20px 12px;
-    display: grid;
+
+  .main .container .form {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    gap: 12px;
-    border-radius: 20px;
+    justify-content: start;
+    align-content: start;
+    text-align: center;
+    gap: 20px;
     background: linear-gradient(185deg, #b9bdc8, #ebeef6);
+    box-shadow: none;
+    border-radius: 10px;
   }
-  .crud form .form-div input[type="text"] {
+  h1 {
+    font-size: 40px;
+    color: rgb(0, 69, 122);
+    height: 20px;
+  }
+
+  .main .container .form form {
+    padding: 0px 20px 22px 20px;
+    width: 100%;
+    display: grid;
+    gap: 12px;
+    box-sizing: border-box;
+  }
+
+  .main .container .form form .form-div {
+    display: grid;
+    align-items: start;
+    justify-items: start;
+    gap: 4px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .main .container .form form .form-div input,
+  textarea {
+    padding: 8px 4px;
+    box-sizing: border-box;
+    width: 100%;
     background-color: #d8d8d8;
     border: 0.5px solid #b5acac;
-    width: 100%;
     border-radius: 3px;
     color: black;
     background: #ced2de;
     box-shadow: inset 6px 6px 12px #bec1cc, inset -6px -6px 12px #dee3f0;
   }
-  .crud h1 {
+  .main .container .form form .form-div ::placeholder {
+    font-size: 12px;
+  }
+  h1 {
     font-size: 32px;
+  }
+  .result h1 {
+    margin-bottom: 25px;
+    margin-left: 0px;
+  }
+  .task {
+    padding: 8px;
+  }
+  .task h1 {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 20px;
+    width: 350px;
+    box-sizing: border-box;
+  }
+
+  .task p {
+    font-size: 12px;
+    width: 350px;
   }
 }

@@ -1,0 +1,102 @@
+// // var selectedRow = null;
+
+// // function showAlert(message, className) {
+// //   const div = document.createElement("div");
+// //   div.className = `alert alert${className}`;
+
+// //   div.appendChild(document.createTextNode(message));
+// //   const container = document.querySelector(".container");
+// //   const main = document.querySelector(".main");
+// //   container.insertBefore(div, main);
+// //   setTimeout(() => document.querySelector(".alert").remove(), 3000);
+// // }
+
+// //delete item when click on delete btn
+
+// // document.querySelector("#student-list").addEventListener("click", (e) => {
+// //   target = e.target;
+// //   if (target.classList.contains("delete")) {
+// //     target.parentElement.parentElement.remove();
+// //     console.log("deleted");
+// //     showAlert("student data deleted", "danger");
+// //   }
+// // });
+
+// let selectedRow = null;
+// let data = [{}];
+// var form = document.getElementById("form");
+// var result = document.getElementById("student-list");
+
+// form.addEventListener("submit", function (e) {
+//   e.preventDefault();
+//   acceptData();
+// });
+
+// const acceptData = () => {
+//   var firstName = document.getElementById("first").value;
+//   var last = document.getElementById("last").value;
+//   var roll = document.getElementById("roll").value;
+//   if (selectedRow === null) {
+//     data.push({
+//       firstName: firstName,
+//       lastName: last,
+//       rollNumber: roll,
+//     });
+//   } else {
+//     data[selectedRow] = {
+//       firstName: firstName,
+//       lastName: last,
+//       rollNumber: roll,
+//     };
+//     selectedRow = NodeIterator;
+//   }
+
+//   localStorage.setItem("data", JSON.stringify(data));
+//   console.log(data);
+
+//   creatTask();
+
+//   document.getElementById("first").value = "";
+//   document.getElementById("last").value = "";
+//   document.getElementById("roll").value = "";
+// };
+
+// const creatTask = () => {
+//   result.innerHTML = "";
+//   data.map((i, index) => {
+//     return (result.innerHTML += `
+//            <tr id=${index}>
+//                 <td id="first-data">${i.firstName}</td>
+//                 <td id="last-data">${i.lastName}</td>
+//                 <td id="roll-data">${i.rollNumber}</td>
+//                 <td class="action-buttons">
+//                   <button onClick='editItem(${index})' class="btn-edit edit">Edit</button>
+//                   <button onClick='deleteItem(this);creatTask()' class="btn-delete deleted delete">Delete</button>
+//                 </td>
+//                 </tr>
+//       `);
+//   });
+// };
+
+// //save data when refresh it to take it from localStorage
+
+// const deleteItem = (i) => {
+//   i.parentElement.parentElement.remove();
+//   data.splice(i.parentElement.parentElement.id, 1);
+//   localStorage.setItem("data", JSON.stringify(data));
+//   console.log("deleted");
+// };
+
+// const editItem = (index) => {
+//   selectedRow = index;
+//   const selectedItem = data[index];
+//   document.getElementById("first").value = selectedItem.firstName;
+//   document.getElementById("last").value = selectedItem.lastName;
+//   document.getElementById("roll").value = selectedItem.rollNumber;
+// };
+
+// (() => {
+//   data = JSON.parse(localStorage.getItem("data")) || [];
+//   console.log(data);
+//   creatTask();
+// })();

@@ -8,23 +8,40 @@
   </head>
 
   <body>
-    <section class="crud">
-      <form>
-        <h1>Crud Application</h1>
-        <div class="form-div">
-          <label for="first" class="label">First Name </label>
-          <input type="text" id="first" placeholder="Enter First Name" />
+    <div class="crud main">
+      <div class="container">
+        <div class="form">
+          <div>
+            <h1>Todo App</h1>
+          </div>
+          <form id="form">
+            <div class="form-div">
+              <label for="title" class="label">Title</label>
+              <input type="text" id="title" placeholder="Title" />
+            </div>
+            <div class="form-div">
+              <label for="description" class="label">description </label>
+              <textarea
+                rows="3"
+                id="description"
+                placeholder="description"
+              ></textarea>
+            </div>
+
+            <button type="submit" id="btn-submit">Submit</button>
+          </form>
         </div>
-        <div class="form-div">
-          <label for="last" class="label">Last Name </label>
-          <input type="text" id="last" placeholder="Enter First Name" />
+
+        <div class="result">
+          <h1 style="font-size: 32px; text-align: left; margin-left: 10px">
+            Tasks
+          </h1>
+          <div>
+            <div id="task"></div>
+          </div>
         </div>
-        <div class="form-div">
-          <label for="roll" class="label">Roll No </label>
-          <input type="text" id="roll" placeholder="Enter First Name" />
-        </div>
-        <button>Submit</button>
-      </form>
-    </section>
+      </div>
+    </div>
+    <script src="./index.js"></script>
   </body>
 </html>
