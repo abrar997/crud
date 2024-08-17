@@ -8,6 +8,7 @@ var task = document.getElementById("task");
 var button = document.getElementById("btn-submit");
 const data = JSON.parse(localStorage.getItem("data")) || [];
 let selecedItem = null;
+const titleTask = document.getElementById("task-title");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -37,6 +38,11 @@ const acceptData = () => {
 };
 
 const createTask = () => {
+  if (data.length === 0) {
+    titleTask.innerHTML = "";
+  } else {
+    titleTask.innerHTML = "Tasks";
+  }
   task.innerHTML = "";
   data.map((i, index) => {
     return (task.innerHTML += `

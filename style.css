@@ -69,6 +69,7 @@ textarea {
 .main .container .form form button:hover {
   opacity: 80%;
 }
+
 .task {
   border-radius: 3px;
   padding: 20px 20px;
@@ -106,7 +107,7 @@ textarea {
 }
 
 .buttons-task .edit {
-  background-color: rgb(33, 100, 171);
+  background-color: teal;
   border-radius: 4px;
   padding: 4px 6px;
   border: none;
@@ -114,7 +115,7 @@ textarea {
   box-shadow: 6px 6px 12px #bec1cc, -6px -6px 12px #dee3f0;
 }
 .buttons-task .delete {
-  background-color: rgb(238, 101, 101);
+  background-color: rgb(222, 55, 122);
   border-radius: 4px;
   padding: 4px 6px;
   border: none;
