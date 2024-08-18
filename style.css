@@ -151,8 +151,7 @@ textarea {
     align-content: start;
     text-align: center;
     gap: 20px;
-    background: linear-gradient(185deg, #b9bdc8, #ebeef6);
-    box-shadow: none;
+    background: linear-gradient(185deg, #b9bdc8, #e7e8ec);
     border-radius: 10px;
   }
   h1 {
@@ -198,11 +197,11 @@ textarea {
     font-size: 32px;
   }
   .result h1 {
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     margin-left: 0px;
   }
   .task {
-    padding: 8px;
+    padding: 18px 12px;
   }
   .task h1 {
     font-weight: 600;
@@ -215,5 +214,6 @@ textarea {
   .task p {
     font-size: 12px;
     width: 350px;
+    margin-top: -25px;
   }
 }
