@@ -2,13 +2,24 @@
 // start define variables depending on id need for form to stop refresh page when click on submit and var to title and description
 
 var form = document.getElementById("form");
-var title = document.getElementById("title").value;
-var description = document.getElementById("description").value;
+var title = document.getElementById("title");
+var description = document.getElementById("description");
 var task = document.getElementById("task");
 var button = document.getElementById("btn-submit");
 const data = JSON.parse(localStorage.getItem("data")) || [];
 let selecedItem = null;
 const titleTask = document.getElementById("task-title");
+
+const ToggleButtonState = () => {
+  if (title.value.trim() !== "" && description.value.trim() !== "") {
+    button.disabled = false;
+  } else {
+    button.disabled = true;
+  }
+};
+
+title.addEventListener("keyup", ToggleButtonState);
+description.addEventListener("keyup", ToggleButtonState);
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -18,15 +29,17 @@ form.addEventListener("submit", function (e) {
 const acceptData = () => {
   var title = document.getElementById("title").value;
   var description = document.getElementById("description").value;
+  const titleValue = title.trim();
+  const descriptionValue = description.trim();
   if (selecedItem === null) {
     data.push({
-      title: title,
-      description: description,
+      title: titleValue,
+      description: descriptionValue,
     });
   } else {
     data[selecedItem] = {
-      title: title,
-      description: description,
+      title: titleValue,
+      description: descriptionValue,
     };
     selecedItem = null;
   }
@@ -35,6 +48,7 @@ const acceptData = () => {
   createTask();
   document.getElementById("title").value = "";
   document.getElementById("description").value = "";
+  ToggleButtonState();
 };
 
 const createTask = () => {
@@ -69,6 +83,7 @@ const editTask = (index) => {
   document.getElementById("title").value = item.title;
   document.getElementById("description").value = item.description;
   selecedItem = index;
+  ToggleButtonState();
 };
 
 createTask();

@@ -1,5 +1,5 @@
 body {
-  background-color: #dfe2e9;
+  background-color: #e7ecf8;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 h1 {
@@ -20,7 +20,6 @@ h1 {
   justify-content: center;
   align-content: center;
   text-align: center;
-  gap: 0px;
   background: linear-gradient(185deg, #b9bdc8, #ebeef6);
   box-shadow: 20px 20px 60px #afb3bd, -20px -20px 60px #edf2ff;
   border-radius: 20px;
@@ -61,52 +60,58 @@ textarea {
   color: rgb(0, 69, 122);
   border: none;
   font-weight: bold;
-  width: 100px;
   cursor: pointer;
+  width: 100px;
   background: #ced2de;
   box-shadow: 6px 6px 12px #bec1cc, -6px -6px 12px #dee3f0;
 }
-.main .container .form form button:hover {
+.main .container .form button:hover {
   opacity: 80%;
+}
+
+.main .container .form button:disabled,
+button[disabled] {
+  background: #ced2de;
+  color: #666666;
+  cursor: not-allowed;
 }
 
 .task {
   border-radius: 3px;
-  padding: 20px 20px;
-  display: flex;
-  flex-direction: column;
+  padding: 20px;
   text-align: left;
   border-radius: 10px;
   margin-top: 20px;
   background: linear-gradient(185deg, #d2deff62, #ebeef6);
   box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
   box-sizing: border-box;
+  line-height: 14px;
 }
 .task h1 {
   font-weight: 600;
   text-transform: capitalize;
   font-size: 20px;
-  margin-top: -4px;
   width: 550px;
   box-sizing: border-box;
 }
 
 .task p {
-  margin-top: -2px;
-  font-size: 12px;
+  font-size: 14px;
   width: 550px;
   box-sizing: border-box;
 }
-
-.buttons-task button {
+.task .buttons-task {
+  margin-top: 20px;
+}
+.task .buttons-task button {
   cursor: pointer;
 }
 
-.buttons-task button:hover {
+.task .buttons-task button:hover {
   opacity: 85%;
 }
 
-.buttons-task .edit {
+.task .buttons-task .edit {
   background-color: teal;
   border-radius: 4px;
   padding: 4px 6px;
@@ -114,7 +119,7 @@ textarea {
   color: white;
   box-shadow: 6px 6px 12px #bec1cc, -6px -6px 12px #dee3f0;
 }
-.buttons-task .delete {
+.task .buttons-task .delete {
   background-color: rgb(222, 55, 122);
   border-radius: 4px;
   padding: 4px 6px;
@@ -154,10 +159,11 @@ textarea {
     background: linear-gradient(185deg, #b9bdc8, #e7e8ec);
     border-radius: 10px;
   }
-  h1 {
+  .main .container .form h1 {
     font-size: 40px;
     color: rgb(0, 69, 122);
     height: 20px;
+    padding-inline: 12px;
   }
 
   .main .container .form form {
@@ -195,6 +201,7 @@ textarea {
   }
   h1 {
     font-size: 32px;
+    text-align: left;
   }
   .result h1 {
     margin-bottom: 40px;
@@ -202,18 +209,21 @@ textarea {
   }
   .task {
     padding: 18px 12px;
+    margin-bottom: 12px;
   }
+
   .task h1 {
     font-weight: 600;
     text-transform: capitalize;
     font-size: 20px;
     width: 350px;
     box-sizing: border-box;
+    line-height: 1;
+    margin-bottom: 4px;
   }
 
   .task p {
     font-size: 12px;
     width: 350px;
-    margin-top: -25px;
   }
 }
