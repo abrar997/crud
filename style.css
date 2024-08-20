@@ -71,9 +71,13 @@ textarea {
 
 .main .container .form button:disabled,
 button[disabled] {
-  background: #ced2de;
-  color: #666666;
+  background: rgb(161, 161, 161);
+  color: #878787fa;
   cursor: not-allowed;
+  transition: all 0.5 ease-in-out;
+}
+.main .container .form button:disabled:hover {
+  opacity: 100%;
 }
 
 .task {
@@ -198,10 +202,6 @@ button[disabled] {
   }
   .main .container .form form .form-div ::placeholder {
     font-size: 12px;
-  }
-  h1 {
-    font-size: 32px;
-    text-align: left;
   }
 
   .task {
