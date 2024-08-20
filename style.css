@@ -20,7 +20,7 @@ h1 {
   justify-content: center;
   align-content: center;
   text-align: center;
-  background: linear-gradient(185deg, #b9bdc8, #ebeef6);
+  background: linear-gradient(185deg, #cad0df, #e2e5ed);
   box-shadow: 20px 20px 60px #afb3bd, -20px -20px 60px #edf2ff;
   border-radius: 20px;
 }
@@ -160,10 +160,10 @@ button[disabled] {
     border-radius: 10px;
   }
   .main .container .form h1 {
-    font-size: 40px;
+    font-size: 32px;
     color: rgb(0, 69, 122);
     height: 20px;
-    padding-inline: 12px;
+    text-align: center;
   }
 
   .main .container .form form {
@@ -203,13 +203,10 @@ button[disabled] {
     font-size: 32px;
     text-align: left;
   }
-  .result h1 {
-    margin-bottom: 40px;
-    margin-left: 0px;
-  }
+
   .task {
-    padding: 18px 12px;
-    margin-bottom: 12px;
+    padding: 12px 12px;
+    padding-bottom: 22px;
   }
 
   .task h1 {
