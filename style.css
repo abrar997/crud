@@ -162,7 +162,7 @@ button[disabled] {
     align-content: start;
     text-align: center;
     gap: 20px;
-    background: linear-gradient(185deg, #cad0df, #cad0df);
+    background: linear-gradient(185deg, #e7e9ee, #cad0df);
     border-radius: 10px;
     box-shadow: 2px 4px #eeee;
   }
