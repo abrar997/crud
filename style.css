@@ -141,6 +141,9 @@ button[disabled] {
 }
 
 @media screen and (min-width: 350px) and (max-width: 662px) {
+  body {
+    background-color: #eff3fb;
+  }
   .main .container {
     display: flex;
     flex-direction: column;
@@ -161,7 +164,7 @@ button[disabled] {
     gap: 20px;
     background: linear-gradient(185deg, #cad0df, #cad0df);
     border-radius: 10px;
-    box-shadow: none;
+    box-shadow: 2px 4px #eeee;
   }
   .main .container .form h1 {
     font-size: 32px;
