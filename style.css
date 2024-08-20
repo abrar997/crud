@@ -71,10 +71,9 @@ textarea {
 
 .main .container .form button:disabled,
 button[disabled] {
-  background: rgb(161, 161, 161);
-  color: #878787fa;
+  background: #ced2de;
+  color: rgb(128, 128, 128);
   cursor: not-allowed;
-  transition: all 0.5 ease-in-out;
 }
 .main .container .form button:disabled:hover {
   opacity: 100%;
