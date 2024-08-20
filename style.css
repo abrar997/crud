@@ -159,8 +159,9 @@ button[disabled] {
     align-content: start;
     text-align: center;
     gap: 20px;
-    background: linear-gradient(185deg, #b9bdc8, #e7e8ec);
+    background: linear-gradient(185deg, #cad0df, #cad0df);
     border-radius: 10px;
+    box-shadow: none;
   }
   .main .container .form h1 {
     font-size: 32px;
