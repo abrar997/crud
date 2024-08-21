@@ -1,5 +1,5 @@
 body {
-  background-color: #e7ecf8;
+  background-color: #dddfe6;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 h1 {
@@ -20,7 +20,7 @@ h1 {
   justify-content: center;
   align-content: center;
   text-align: center;
-  background: linear-gradient(185deg, #cad0df, #e7ecf8);
+  background: linear-gradient(185deg, #dfe1e7, #e4e8f1);
   box-shadow: 20px 20px 60px #afb3bd, -20px -20px 60px #edf2ff;
   border-radius: 20px;
 }
